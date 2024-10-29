@@ -1,0 +1,331 @@
+body {
+    font-family: 'COURIER NEW', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffcc99;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+a {
+    text-decoration: none;
+}
+
+header {
+    padding: 10px 50px;
+}
+
+nav {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between; /* Разделяем элементы */
+    align-items: center; /* Центрируем по вертикали */
+}
+
+.brand {
+    font-size: 3em;
+    font-weight: bold;
+    color: white;
+    margin: 0;
+    text-align: left;
+    line-height: 0.9; /* Контролируем расстояние между строками */
+}
+
+.brand-top, .brand-bottom {
+    display: block; /* Размещаем каждый span на отдельной строке */
+}
+
+.menu {
+    font-size: 1.5em;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Располагаем элементы меню в одну строку */
+}
+
+.menu li {
+    padding: 7px;
+    margin: 0 15px;
+    position: relative;
+}
+
+.menu a, .menu li {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.menu li::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%) scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.menu li:hover a {
+    color: black;
+    transform: scale(1.1);
+}
+
+.menu li:hover::after {
+    transform: translateX(-50%) scaleX(1);
+}
+
+.menu a.action-button {
+    color: white; /* Цвет текста */
+    background-color: transparent; /* Цвет фона, если нужно */
+    padding: 10px; /* Отступы */
+    font-size: 1em;
+    border: none; /* Уберите рамки, если есть */
+    cursor: pointer; /* Указатель при наведении */
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+footer {
+    color: white;
+    text-align: center;
+    background-color: #000000;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    width: 100%;
+}
+
+footer a {
+    text-decoration: none;
+    color: #fff3e6;
+}
+
+footer a:hover {
+    color: #b0815d;
+}
+
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap; /* Перенос на новую строку для картинок */
+    gap: 20px; /* Отступы между картинками */
+    padding: 20px;
+    justify-content: space-between;
+}
+
+.image-item {
+    width: calc(25% - 20px); /* Делим ширину на 4 колонки, минус отступы */
+    position: relative;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.image-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 450px; /* Задаем фиксированную высоту */
+    border-radius: 10px;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Обрезка изображения для сохранения пропорций */
+    transition: transform 0.3s ease;
+}
+
+.image-container:hover img {
+    transform: scale(1.05); /* Увеличение картинки при наведении */
+}
+
+.image-description {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.6); /* Полупрозрачный черный фон */
+    color: white;
+    opacity: 0;
+    transition: opacity 0.3s ease; /* Плавное появление текста */
+    font-size: 1.2em;
+}
+
+.image-container:hover .image-description {
+    opacity: 1; /* Показать описание при наведении */
+}
+
+.add-button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #d7b592;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.add-button:hover {
+    background-color: #b0815d; /* Цвет при наведении */
+}
+
+.text_h1 {
+    font-size: 5em;
+    padding: 10;
+    margin: 10;
+    text-align: center;
+    color: white;
+}
+
+.text_h2 {
+    font-size: 2.5em;
+    padding-left: 20px;
+    text-align: left;
+    color: black;
+}
+
+.button-row {
+    display: flex;
+    justify-content: space-between; /* Равномерное расстояние между кнопками */
+    gap: 100px; /* Отступ между кнопками */
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.action-button {
+    width: 250px;
+    flex: 1; /* Каждая кнопка займет равную часть от доступного пространства */
+    padding: 10px;
+    background-color: #ffcc99;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.3em;
+    transition: background-color 0.3s ease;
+}
+
+.action-button:hover {
+    background-color: #b0815d; /* Цвет кнопки при наведении */
+    color: black;
+}
+
+ol {
+    padding-left: 50px; 
+    width: 30em;
+
+}
+
+
+
+/* Стили для основного уровня списка */
+ol > li {
+    background-color: #f7f7f7;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 1.2em;
+    color: #333;
+    cursor: pointer;
+}
+
+/* Вложенные элементы */
+ol li ul li {
+    font-size: 1em;
+    font-weight: normal;
+    color: #666;
+    margin: 5px 0;
+    background-color: #fafafa;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+ol > li:hover {
+    background-color: #e6e6e6;
+    color: #111;
+}
+
+td img {
+    width: 300px;
+    height: 200px;
+}
+
+.container {
+    display: flex; /* Используем flexbox для горизонтального выравнивания */
+    justify-content: space-between; /* Промежутки между элементами */
+    align-items: flex-start; /* Выравнивание по верхнему краю */
+}
+
+.list-container {
+    flex: 1; /* Позволяем списку занимать доступное пространство */
+    padding: 20px; /* Добавляем отступы для удобства */
+}
+
+.table-container {
+    flex: 1; /* Позволяем таблице занимать доступное пространство */
+    padding: 20px; /* Добавляем отступы для удобства */
+    margin: 30px;
+    background-image: url('img/bg_table.jpg'); /* Указываем путь к изображению */
+    background-size: cover; /* Заполняем контейнер изображением */
+    background-position: center; /* Центрируем изображение */
+    border-radius: 8px; /* Добавляем скругленные углы (по желанию) */
+}
+
+
+table {
+    color: white;
+    font-size: 33px;
+    font-weight: bold;
+    width: 100%; /* Ширина таблицы 100% от контейнера */
+    border-collapse: collapse; /* Убираем пробелы между ячейками */
+}
+
+th, td {
+    border: 1px solid #000; /* Добавляем границу для ячеек */
+    padding: 10px; /* Отступ внутри ячеек */
+    text-align: left; /* Выравнивание текста по левому краю */
+}
+
+
+.cart {
+    position: fixed;
+    top: 10%;
+    right: 10%;
+    padding: 10px;
+    background-color: #f9f9f9;
+    z-index: 1000; /* Убедитесь, что корзина поверх других элементов */
+    display: none; /* Скрыто по умолчанию */
+}
+
+#cart-items {
+    list-style: none;
+    padding: 0;
+}
+
+
+
+
+
+/* Адаптивные стили для мобильных */
+@media (max-width: 768px) {
+    .image-item {
+        width: calc(50% - 10px); /* 2 колонки на планшетах */
+    }
+}
+
+@media (max-width: 480px) {
+    .image-item {
+        width: 100%; /* 1 колонка на мобильных */
+    }
+}
