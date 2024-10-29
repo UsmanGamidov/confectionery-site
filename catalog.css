@@ -298,21 +298,6 @@ th, td {
     text-align: left; /* Выравнивание текста по левому краю */
 }
 
-
-/* Уведомление */
-.notification {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    padding: 15px;
-    background-color: #4CAF50;
-    color: white;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-    z-index: 1000;
-    font-size: 1.2em;
-}
-
 /* Корзина */
 .cart {
     position: fixed;
@@ -363,16 +348,6 @@ th, td {
     background-color: #c27b5a;
 }
 
-/* Анимация для уведомления */
-@keyframes fadeInOut {
-    0% { opacity: 0; }
-    10%, 90% { opacity: 1; }
-    100% { opacity: 0; }
-}
-
-.notification {
-    animation: fadeInOut 3s ease-in-out;
-}
 
 /* Адаптивный дизайн */
 @media (max-width: 768px) {

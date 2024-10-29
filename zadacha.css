@@ -1,8 +1,11 @@
 body {
     font-family: 'COURIER NEW', Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #ffcc99;
+    display: flex; /* Используем Flexbox для body */
+    flex-direction: column; /* Располагаем элементы по вертикали */
+    min-height: 100vh; /* Минимальная высота body 100% от высоты окна */
+    margin: 0; /* Убираем отступы */
+    padding: 0; /* Убираем внутренние отступы */
+    background-color: #ffcc99; /* Цвет фона */
 }
 
 html {
@@ -98,29 +101,19 @@ footer {
     padding-top: 15px;
     padding-bottom: 15px;
     width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 footer a {
+    margin: 0px 60px 0px 60px;
     text-decoration: none;
     color: #fff3e6;
 }
 
 footer a:hover {
     color: #b0815d;
-}
-
-/* Уведомление */
-.notification {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    padding: 15px;
-    background-color: #4CAF50;
-    color: white;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-    z-index: 1000;
-    font-size: 1.2em;
 }
 
 /* Корзина */
@@ -173,13 +166,46 @@ footer a:hover {
     background-color: #c27b5a;
 }
 
-/* Анимация для уведомления */
-@keyframes fadeInOut {
-    0% { opacity: 0; }
-    10%, 90% { opacity: 1; }
-    100% { opacity: 0; }
+.solution-container {
+    flex: 1;
+    margin: 150px auto; /* Центрируем с помощью margin auto */
+    padding: 20px;
+    background-color: white;
+    display: flex; /* Используем Flexbox для центрирования */
+    flex-direction: column; /* Располагаем элементы по вертикали */
+    justify-content: center; /* Центруем содержимое по вертикали */
+    align-items: center; /* Центруем содержимое по горизонтали */
+    width: 500px; /* Фиксированная ширина для меньшего размера блока */
+    border-radius: 8px; /* Закругление углов */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Тень для блока */
 }
 
-.notification {
-    animation: fadeInOut 3s ease-in-out;
+.styled-input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin: 10px 0;
+    width: 50%;
+    box-sizing: border-box;
+}
+
+.styled-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    transition: background-color 0.3s;
+}
+
+.styled-button:hover {
+    background-color: #0056b3;
+}
+
+.result {
+    margin-top: 20px;
+    font-size: 18px;
 }

@@ -1,14 +1,23 @@
 body {
     font-family: 'COURIER NEW', Arial, sans-serif;
+    background-color: #ffcc99;
     margin: 0;
     padding: 0;
-    background-color: #ffcc99;
+    height: 100%;
 }
 
 html {
     scroll-behavior: smooth;
+    height: 100%;
 }
 
+main {
+    flex: 1; /* Центральный блок занимает оставшееся место */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
 
 a {
     text-decoration: none;
@@ -24,6 +33,7 @@ nav {
     display: flex;
     justify-content: space-between; /* Разделяем элементы */
     align-items: center; /* Центрируем по вертикали */
+    
 }
 
 .brand {
@@ -91,38 +101,6 @@ nav {
     transition: color 0.3s ease, transform 0.3s ease;
 }
 
-footer {
-    color: white;
-    text-align: center;
-    background-color: #000000;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    width: 100%;
-}
-
-footer a {
-    text-decoration: none;
-    color: #fff3e6;
-}
-
-footer a:hover {
-    color: #b0815d;
-}
-
-
-/* Уведомление */
-.notification {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    padding: 15px;
-    background-color: #4CAF50;
-    color: white;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-    z-index: 1000;
-    font-size: 1.2em;
-}
 
 /* Корзина */
 .cart {
@@ -174,13 +152,63 @@ footer a:hover {
     background-color: #c27b5a;
 }
 
-/* Анимация для уведомления */
-@keyframes fadeInOut {
-    0% { opacity: 0; }
-    10%, 90% { opacity: 1; }
-    100% { opacity: 0; }
+
+.passport-page {
+    margin: 30px;
+    background-color: white;
+    width: 430px;
+    padding: 20px;
+    border: 1px solid #999;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-.notification {
-    animation: fadeInOut 3s ease-in-out;
+.passport-info p {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+.styled-button {
+    margin: 5px 0px 5px 0px;
+    padding: 10px;
+    font-size: 1em;
+    cursor: pointer;
+    border: none;
+    border-radius: 3px;
+    width: 200px;
+    background-color: #007bff;
+    color: white;
+    transition: background-color 0.3s;
+}
+
+.styled-button:hover {
+    background-color: #0056b3;
+}
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+footer {
+    color: white;
+    text-align: center;
+    background-color: #000000;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer a {
+    margin: 0px 60px 0px 60px;
+    text-decoration: none;
+    color: #fff3e6;
+}
+
+footer a:hover {
+    color: #b0815d;
 }

@@ -150,19 +150,7 @@ input[type="reset"]:hover {
     background-color: #c27b5a;
 }
 
-/* Уведомление */
-.notification {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    padding: 15px;
-    background-color: #4CAF50;
-    color: white;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-    z-index: 1000;
-    font-size: 1.2em;
-}
+
 
 /* Корзина */
 .cart {
@@ -214,15 +202,5 @@ input[type="reset"]:hover {
     background-color: #c27b5a;
 }
 
-/* Анимация для уведомления */
-@keyframes fadeInOut {
-    0% { opacity: 0; }
-    10%, 90% { opacity: 1; }
-    100% { opacity: 0; }
-}
-
-.notification {
-    animation: fadeInOut 3s ease-in-out;
-}
 
 
