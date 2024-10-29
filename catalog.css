@@ -314,18 +314,50 @@ th, td {
 }
 
 
-
-
-
-/* Адаптивные стили для мобильных */
+/* Адаптивный дизайн */
 @media (max-width: 768px) {
+    .brand {
+        font-size: 2em;
+    }
+
+    .menu {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu li {
+        margin-bottom: 10px;
+    }
+
+    .action-button {
+        font-size: 1em;
+    }
+
+    h1.text_h1, h2.text_h2 {
+        font-size: 1.5em;
+    }
+
     .image-item {
-        width: calc(50% - 10px); /* 2 колонки на планшетах */
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .button-row {
+        flex-direction: column; /* Изменение направления кнопок */
+    }
+
+    .list-container, .table-container {
+        margin: 10px;
+        flex: 1 1 100%; /* Увеличение ширины для мобильных устройств */
     }
 }
 
 @media (max-width: 480px) {
-    .image-item {
-        width: 100%; /* 1 колонка на мобильных */
+    .image-container {
+        width: 100%; /* Ширина изображения на маленьких экранах */
+    }
+
+    .action-button {
+        padding: 8px 16px;
     }
 }
