@@ -16,6 +16,7 @@ a {
 
 header {
     padding: 10px 50px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 nav {
@@ -298,21 +299,80 @@ th, td {
 }
 
 
+/* Уведомление */
+.notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 15px;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    font-size: 1.2em;
+}
+
+/* Корзина */
 .cart {
     position: fixed;
     top: 10%;
     right: 10%;
-    padding: 10px;
-    background-color: #f9f9f9;
-    z-index: 1000; /* Убедитесь, что корзина поверх других элементов */
-    display: none; /* Скрыто по умолчанию */
+    padding: 20px;
+    background-color: #fff;
+    color: #333;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 300px;
 }
 
-#cart-items {
+.cart h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.cart ul {
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
+.cart li {
+    margin: 10px 0;
+    font-size: 1em;
+}
+
+#checkout-button,
+#close-cart-button {
+    background-color: #db8b6a;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#checkout-button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+#checkout-button:hover:not(:disabled),
+#close-cart-button:hover {
+    background-color: #c27b5a;
+}
+
+/* Анимация для уведомления */
+@keyframes fadeInOut {
+    0% { opacity: 0; }
+    10%, 90% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+.notification {
+    animation: fadeInOut 3s ease-in-out;
+}
 
 /* Адаптивный дизайн */
 @media (max-width: 768px) {

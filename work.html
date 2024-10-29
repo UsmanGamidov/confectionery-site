@@ -36,7 +36,7 @@
 
     <h3 align="center">Формы. Отправляем данные на сервер</h3>
     <form action="https://www.bing.com/search?" id="UserEnter" name="UserEnter" target="_blank" onsubmit="return showNotification();">
-        <p>Для поисковика: <input type="hidden" name="q" value="search"></p>
+        <p><input type="hidden" name="q" value="Заявка успешно отправлена. С вами свяжуться."></p>
         
         <p>ФИО: <input type="text" name="last_name" size="60" value="ФИО"></p>
         
@@ -93,6 +93,13 @@
     </form>
 
     <div id="notification" class="notification" style="display: none;">Данные успешно отправлены!</div>
+
+    
+    <footer style="display: flex; justify-content: space-between;">
+        <a href="pasport.html"><p style="padding-left: 60px;">Паспорт</p></a>
+        <p>&copy; 2024 Кондитерская Сладкий путь. Все права защищены.</p>
+        <a href="zadacha.html"><p style="padding-right: 60px;">Задача</p></a>
+    </footer>
 
     <script>
         function showNotification() {

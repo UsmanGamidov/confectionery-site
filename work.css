@@ -1,73 +1,4 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 20px;
-}
-
-h3 {
-    color: #333;
-}
-
-form {
-    background-color: white;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 20px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
-}
-
-input[type="text"],
-input[type="number"],
-input[type="password"],
-input[type="date"],
-select,
-textarea {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-input[type="radio"],
-input[type="checkbox"] {
-    margin-right: 5px;
-}
-
-input[type="submit"],
-input[type="reset"] {
-    background-color: #28a745; /* Зелёный цвет */
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s ease;
-}
-
-input[type="submit"]:hover,
-input[type="reset"]:hover {
-    background-color: #218838; /* Темно-зелёный при наведении */
-}
-
-.notification {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    padding: 15px;
-    background-color: #4CAF50; /* Зелёный цвет */
-    color: white;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-    z-index: 1000;
-}
-
-
-
-body {
     font-family: 'COURIER NEW', Arial, sans-serif;
     margin: 0;
     padding: 0;
@@ -81,10 +12,21 @@ html {
 
 a {
     text-decoration: none;
+    color: white;
+}
+
+footer {
+    color: white;
+    text-align: center;
+    background-color: #000000;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    width: 100%;
 }
 
 header {
     padding: 10px 50px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 nav {
@@ -159,18 +101,128 @@ nav {
     transition: color 0.3s ease, transform 0.3s ease;
 }
 
+
+/* Форма */
+form {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    max-width: 600px;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="password"],
+input[type="date"],
+select,
+textarea {
+    width: calc(100% - 20px);
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+input[type="submit"],
+input[type="reset"] {
+    background-color: #db8b6a;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+    margin-right: 10px;
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+    background-color: #c27b5a;
+}
+
+/* Уведомление */
+.notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 15px;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    font-size: 1.2em;
+}
+
+/* Корзина */
 .cart {
     position: fixed;
     top: 10%;
     right: 10%;
-    padding: 10px;
-    background-color: #f9f9f9;
-    color: black;
-    z-index: 1000; /* Убедитесь, что корзина поверх других элементов */
-    display: none; /* Скрыто по умолчанию */
+    padding: 20px;
+    background-color: #fff;
+    color: #333;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 300px;
 }
 
-#cart-items {
+.cart h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.cart ul {
     list-style: none;
     padding: 0;
+    margin: 0;
 }
+
+.cart li {
+    margin: 10px 0;
+    font-size: 1em;
+}
+
+#checkout-button,
+#close-cart-button {
+    background-color: #db8b6a;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#checkout-button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+#checkout-button:hover:not(:disabled),
+#close-cart-button:hover {
+    background-color: #c27b5a;
+}
+
+/* Анимация для уведомления */
+@keyframes fadeInOut {
+    0% { opacity: 0; }
+    10%, 90% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+.notification {
+    animation: fadeInOut 3s ease-in-out;
+}
+
+
