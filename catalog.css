@@ -195,6 +195,14 @@ footer a:hover {
     color: black;
 }
 
+.text_h3 {
+    font-size: 2em;
+    padding-left: 20px;
+    margin-top: 0px;
+    text-align: left;
+    color: black;
+}
+
 .button-row {
     display: flex;
     justify-content: space-between; /* Равномерное расстояние между кнопками */
