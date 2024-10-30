@@ -104,6 +104,8 @@ nav {
 
 /* Корзина */
 .cart {
+    z-index: 1000;
+
     position: fixed;
     top: 10%;
     right: 10%;
@@ -198,9 +200,6 @@ footer {
     padding-top: 15px;
     padding-bottom: 15px;
     width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
 }
 
 footer a {

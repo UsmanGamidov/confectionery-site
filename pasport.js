@@ -1,24 +1,25 @@
 // script.js
 
+// Функция для изменения данных
 function modifyData() {
-    // Изменение данных через prompt
-    const passportissued = prompt("Введите кем выдан:", document.getElementById("passport-issued").innerText);
-    const dateissue = prompt("Введите дату выдачи:", document.getElementById("date-issue").innerText);
-    const departmentcode = prompt("Введите код подразделения:", document.getElementById("department-code").innerText);
-    const gender = prompt("Введите пол(МУЖ, ЖЕН):", document.getElementById("gender").innerText);
-    const placebirth = prompt("Введите место рождения:", document.getElementById("place-birth").innerText);
-    const seriesnumber = prompt("Введите серию и номер:", document.getElementById("series-number").innerText);
+    // Сбор данных через prompt
+    const passportIssued = prompt("Введите кем выдан:", document.getElementById("passport-issued").innerText);
+    const dateIssue = prompt("Введите дату выдачи:", document.getElementById("date-issue").innerText);
+    const departmentCode = prompt("Введите код подразделения:", document.getElementById("department-code").innerText);
+    const gender = prompt("Введите пол (МУЖ, ЖЕН):", document.getElementById("gender").innerText);
+    const placeBirth = prompt("Введите место рождения:", document.getElementById("place-birth").innerText);
+    const seriesNumber = prompt("Введите серию и номер:", document.getElementById("series-number").innerText);
 
-
-    if (passportissued) document.getElementById("passport-issued").innerText = passportissued;
-    if (dateissue) document.getElementById("date-issue").innerText = dateissue;
-    if (departmentcode) document.getElementById("department-code").innerText = departmentcode;
+    // Обновляем текст в соответствующих элементах, если пользователь ввел данные
+    if (passportIssued) document.getElementById("passport-issued").innerText = passportIssued;
+    if (dateIssue) document.getElementById("date-issue").innerText = dateIssue;
+    if (departmentCode) document.getElementById("department-code").innerText = departmentCode;
     if (gender) document.getElementById("gender").innerText = gender;
-    if (placebirth) document.getElementById("place-birth").innerText = placebirth;
-    if (seriesnumber) document.getElementById("series-number").innerText = seriesnumber;
+    if (placeBirth) document.getElementById("place-birth").innerText = placeBirth;
+    if (seriesNumber) document.getElementById("series-number").innerText = seriesNumber;
 }
 
-
+// Объект с переводами фамилий и имен
 const translations = {
     "Иванов": "Ivanov",
     "Иван": "Ivan",
@@ -26,8 +27,8 @@ const translations = {
     "Ivan": "Иван"
 };
 
+// Функция для перевода данных
 function translateData() {
-    
     const lastNameElement = document.getElementById("last-name");
     const firstNameElement = document.getElementById("first-name");
 
@@ -40,10 +41,10 @@ function translateData() {
     // Переводим имя
     const firstName = firstNameElement.innerText;
     if (firstName == "Иван") {firstNameElement.innerText = "Ivan" } else { firstNameElement.innerText = "Иван" };
-
+    
 }
 
-
+// Функция для открытия новой страницы
 function openPage() {
-    window.location.href = 'dom.html';
+    window.location.href = 'dom.html'; // Переход на страницу dom.html
 }

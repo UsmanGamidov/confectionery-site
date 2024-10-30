@@ -154,6 +154,8 @@ input[type="reset"]:hover {
 
 /* Корзина */
 .cart {
+    z-index: 1000;
+
     position: fixed;
     top: 10%;
     right: 10%;
